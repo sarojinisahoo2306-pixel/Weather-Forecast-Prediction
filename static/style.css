@@ -1,0 +1,113 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+    background-image: url("Images/background.1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+.container{
+    width: 500px;
+    max-width: 90%;
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 30px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 8px 32px rgba(0,0,0,0.25),
+        inset 0 1px 1px rgba(255,255,255,0.3);
+
+    transition: 0.4s ease;
+}
+
+.container:hover{
+    transform: translateY(-6px);
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.3),
+        inset 0 1px 1px rgba(255,255,255,0.4);
+}
+
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:25px;
+}
+
+label{
+    color:white;
+    font-weight:bold;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:8px 0 18px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#ff9800;
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#ff6f00;
+    transform:scale(1.03);
+}
+.result{
+    margin-top:25px;
+    background:white;
+    color:#1565c0;
+    padding:15px;
+    border-radius:12px;
+    text-align:center;
+    font-size:24px;
+    font-weight:bold;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.footer{
+    margin-top:25px;
+    text-align:center;
+    color:white;
+    font-size:15px;
+}
+
+input:focus{
+    outline:none;
+    border:2px solid #00e5ff;
+    box-shadow:0 0 10px #00e5ff;
+}
+
