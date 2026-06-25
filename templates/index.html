@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Weather Forecast Prediction</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🌤 Weather Forecast Prediction</h1>
+
+<form action="/predict" method="POST">
+
+<label>💧 Humidity</label>
+<input type="number"
+       step="0.01"
+       name="humidity"
+       placeholder="Example: 0.89"
+       required>
+
+<label>🌬 Wind Speed (km/h)</label>
+<input type="number"
+       step="0.01"
+       name="wind_speed"
+       placeholder="Example: 14.12"
+       required>
+
+<label>🧭 Wind Bearing (degrees)</label>
+<input type="number"
+       name="wind_bearing"
+       placeholder="Example: 251"
+       required>
+
+<label>👁 Visibility (km)</label>
+<input type="number"
+       step="0.01"
+       name="visibility"
+       placeholder="Example: 15.82"
+       required>
+
+<label>🌡 Pressure (millibars)</label>
+<input type="number"
+       step="0.01"
+       name="pressure"
+       placeholder="Example: 1015.13"
+       required>
+
+<label>🗓 Month</label>
+<input type="number"
+       min="1"
+       max="12"
+       name="month"
+       placeholder="1-12"
+       required>
+
+<label>📆 Day</label>
+<input type="number"
+       min="1"
+       max="31"
+       name="day"
+       placeholder="1-31"
+       required>
+
+<label>📅 Year</label>
+<input type="number"
+       name="year"
+       placeholder="Example: 2006"
+       required>
+
+<button type="submit">
+Predict Temperature
+</button>
+
+</form>
+
+{% if prediction_text %}
+
+<div class="result">
+
+{{ prediction_text }}
+
+</div>
+
+{% endif %}
+
+<div class="footer">
+    🌤 Developed by <b>Sarojini Sahoo</b><br>
+    Machine Learning Project | 2026
+</div>
+
+</div>
+
+</body>
+
+</html>
+ 
